@@ -1,0 +1,24 @@
+<div class="header">
+    <span class="type">Funktionelle Gruppe</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">Was ist der <b>Suffix</b> von <b>{{Stoffklasse}}</b>?</div>
+    <hr />
+    <div class="images">{{Suffix}}</div>
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

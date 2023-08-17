@@ -1,0 +1,26 @@
+{
+    "name": "@Paul (Vokabel, beide Richtungen)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Begriff"
+        },
+        {
+            "id": 2,
+            "name": "Übersetzung"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Begriff → Übersetzung"
+        },
+        {
+            "id": 2,
+            "name": "Übersetzung → Begriff"
+        }
+    ]
+}

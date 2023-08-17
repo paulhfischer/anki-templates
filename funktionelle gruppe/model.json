@@ -1,0 +1,58 @@
+{
+    "name": "@Paul (Funktionelle Gruppe)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Stoffklasse"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel"
+        },
+        {
+            "id": 3,
+            "name": "Priorität"
+        },
+        {
+            "id": 4,
+            "name": "Präfix"
+        },
+        {
+            "id": 5,
+            "name": "Suffix"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Stoffklasse → Strukturformel"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel → Stoffklasse"
+        },
+        {
+            "id": 3,
+            "name": "Stoffklasse → Präfix"
+        },
+        {
+            "id": 4,
+            "name": "Präfix → Stoffklasse"
+        },
+        {
+            "id": 5,
+            "name": "Stoffklasse → Suffix"
+        },
+        {
+            "id": 6,
+            "name": "Suffix → Stoffklasse"
+        },
+        {
+            "id": 7,
+            "name": "Stoffklasse → Priorität"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+<div class="header">
+    <span class="type">Periodensystem</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">An welcher <b>Position</b> befindet sich das Element <b>{{Name}}</b>?</div>
+</div>
+
+<script>
+    (() => {
+        const symbol = '{{Symbol}}';
+        document.getElementById(symbol).className = 'active';
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

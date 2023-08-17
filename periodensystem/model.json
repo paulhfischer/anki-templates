@@ -1,0 +1,62 @@
+{
+    "name": "@Paul (Periodensystem)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Name"
+        },
+        {
+            "id": 2,
+            "name": "Symbol"
+        },
+        {
+            "id": 3,
+            "name": "Ordnungszahl"
+        },
+        {
+            "id": 4,
+            "name": "Periode"
+        },
+        {
+            "id": 5,
+            "name": "Gruppe"
+        },
+        {
+            "id": 6,
+            "name": "Elektronegativität"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Name → Symbol"
+        },
+        {
+            "id": 2,
+            "name": "Symbol → Name"
+        },
+        {
+            "id": 3,
+            "name": "Name → Ordnungszahl"
+        },
+        {
+            "id": 4,
+            "name": "Ordnungszahl → Name"
+        },
+        {
+            "id": 5,
+            "name": "Name → Position"
+        },
+        {
+            "id": 6,
+            "name": "Position → Name"
+        },
+        {
+            "id": 7,
+            "name": "Name → Elektronegativität"
+        }
+    ]
+}

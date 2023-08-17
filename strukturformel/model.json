@@ -1,0 +1,26 @@
+{
+    "name": "@Paul (Strukturformel)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Name"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Name → Strukturformel"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel → Name"
+        }
+    ]
+}

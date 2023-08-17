@@ -1,0 +1,48 @@
+<div class="header">
+    <span class="type">Image Occlusion</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    {{#Header}}
+        <div class="question">{{Header}}</div>
+    {{/Header}}
+
+    <div id="io-wrapper">
+        <div id="io-overlay">{{Question Mask}}</div>
+        <div id="io-original">{{Image}}</div>
+    </div>
+
+    {{#Footer}}
+        <div class="additional-infos">{{Footer}}</div>
+    {{/Footer}}
+</div>
+
+<script>
+    (() => {
+        // Prevent original image from loading before mask
+        const loaded = () => {
+            const originalElement = document.querySelector('#io-original');
+
+            originalElement.style.visibility = 'visible';
+        };
+        const maskElement = document.querySelector('#io-overlay>img');
+        if (maskElement === null || maskElement.complete) {
+            loaded();
+        } else {
+            maskElement.addEventListener('load', loaded);
+        }
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>
