@@ -9,7 +9,8 @@
         },
         {
             "id": 2,
-            "name": "Strukturformel"
+            "name": "Strukturformel",
+            "excludeFromSearch": true
         },
         {
             "id": 3,

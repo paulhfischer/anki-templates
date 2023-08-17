@@ -21,7 +21,8 @@
         },
         {
             "id": 5,
-            "name": "Bilder"
+            "name": "Bilder",
+            "excludeFromSearch": true
         }
     ],
     "sortFieldID": 1,
