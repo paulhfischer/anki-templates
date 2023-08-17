@@ -25,11 +25,13 @@
         },
         {
             "id": 6,
-            "name": "Prometheus-Bild"
+            "name": "Prometheus-Bild",
+            "excludeFromSearch": true
         },
         {
             "id": 7,
-            "name": "Kenhub-Bild"
+            "name": "Kenhub-Bild",
+            "excludeFromSearch": true
         }
     ],
     "sortFieldID": 1,
