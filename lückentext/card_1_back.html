@@ -1,0 +1,37 @@
+<div class="header">
+    <span class="type">Lückentext</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">{{cloze:Lückentext}}</div>
+
+    {{#Beispiele}}
+        <div class="examples">
+            <div><strong>Bsp.: </strong></div>
+            <div>{{Beispiele}}</div>
+        </div>
+    {{/Beispiele}}
+
+    {{#Zusatzinformationen}}
+        <div class="additional-infos">{{Zusatzinformationen}}</div>
+    {{/Zusatzinformationen}}
+
+    {{#Bilder}}
+        <div class="images">{{Bilder}}</div>
+    {{/Bilder}}
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

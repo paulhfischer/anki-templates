@@ -1,0 +1,30 @@
+{
+    "name": "@Paul (Lückentext)",
+    "cssFile": "../style.css",
+    "type": "cloze",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Lückentext"
+        },
+        {
+            "id": 2,
+            "name": "Beispiele"
+        },
+        {
+            "id": 3,
+            "name": "Zusatzinformationen"
+        },
+        {
+            "id": 4,
+            "name": "Bilder"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Lückentext"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{{#Elektronegativität}}
+    <div class="header">
+        <span class="type">Periodensystem</span>
+        <span class="tags"></span>
+    </div>
+
+    <div class="body">
+        <div class="question">Was ist die <b>Elektronegativität</b> (nach Pauling) des Elements <b>{{Name}}</b>?</div>
+        <hr />
+        <div class="answer">{{Elektronegativität}}</div>
+    </div>
+
+    <script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>
+{{/Elektronegativität}}

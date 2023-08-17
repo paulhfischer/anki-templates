@@ -1,0 +1,63 @@
+<div class="header">
+    <span class="type">Image Occlusion</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    {{#Header}}
+        <div class="question">{{Header}}</div>
+    {{/Header}}
+
+    <div id="io-wrapper">
+        <div id="io-overlay">{{Answer Mask}}</div>
+        <div id="io-original">{{Image}}</div>
+    </div>
+
+    {{#Footer}}
+        <div class="additional-infos">{{Footer}}</div>
+    {{/Footer}}
+
+    <button id="io-revl-btn">Toggle Masks</button>
+</div>
+
+<script>
+    (() => {
+        // Toggle answer mask on clicking the image
+        const toggle = () => {
+            const answerMaskElement = document.getElementById('io-overlay');
+
+            if (answerMaskElement.style.display === 'block' || answerMaskElement.style.display === '') {
+                answerMaskElement.style.display = 'none';
+            } else {
+                answerMaskElement.style.display = 'block';
+            }
+        };
+        const toggleElement = document.getElementById('io-revl-btn');
+        toggleElement.addEventListener('click', toggle);
+
+        // Prevent original image from loading before mask
+        const loaded = () => {
+            const originalElement = document.querySelector('#io-original');
+
+            originalElement.style.visibility = 'visible';
+        };
+        const maskElement = document.querySelector('#io-overlay>img');
+        if (maskElement === null || maskElement.complete) {
+            loaded();
+        } else {
+            maskElement.addEventListener('load', loaded);
+        }
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

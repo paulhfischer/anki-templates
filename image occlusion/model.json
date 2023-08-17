@@ -1,0 +1,58 @@
+{
+    "name": "Image Occlusion Enhanced",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "ID (hidden)"
+        },
+        {
+            "id": 2,
+            "name": "Header"
+        },
+        {
+            "id": 3,
+            "name": "Image"
+        },
+        {
+            "id": 4,
+            "name": "Question Mask"
+        },
+        {
+            "id": 5,
+            "name": "Footer"
+        },
+        {
+            "id": 6,
+            "name": "Remarks"
+        },
+        {
+            "id": 7,
+            "name": "Sources"
+        },
+        {
+            "id": 8,
+            "name": "Extra 1"
+        },
+        {
+            "id": 9,
+            "name": "Extra 2"
+        },
+        {
+            "id": 10,
+            "name": "Answer Mask"
+        },
+        {
+            "id": 11,
+            "name": "Original Mask"
+        }
+    ],
+    "sortFieldID": 2,
+    "templates": [
+        {
+            "id": 1,
+            "name": "IO Card"
+        }
+    ]
+}

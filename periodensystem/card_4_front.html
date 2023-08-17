@@ -1,0 +1,22 @@
+<div class="header">
+    <span class="type">Periodensystem</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">Welches <b>Element</b> hat die Ordnungszahl <b>{{Ordnungszahl}}</b>?</div>
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

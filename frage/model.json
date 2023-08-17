@@ -1,0 +1,34 @@
+{
+    "name": "@Paul (Frage)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Vorderseite"
+        },
+        {
+            "id": 2,
+            "name": "Rückseite"
+        },
+        {
+            "id": 3,
+            "name": "Beispiele"
+        },
+        {
+            "id": 4,
+            "name": "Zusatzinformationen"
+        },
+        {
+            "id": 5,
+            "name": "Bilder"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Vorderseite → Rückseite"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+<div class="header">
+    <span class="type">Muskel</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">Wie $ARTIKEL$ <b>$NAME$</b> <b>innerviert</b>?</div>
+    <hr />
+    <div class="answer">{{Innervation}}</div>
+
+    <div class="images">
+        {{#Prometheus-Bild}}
+            <section>{{Prometheus-Bild}}</section>
+        {{/Prometheus-Bild}}
+        {{#Kenhub-Bild}}
+            <section>{{Kenhub-Bild}}</section>
+        {{/Kenhub-Bild}}
+    </div>
+</div>
+
+<script>
+    (() => {
+        const originalName = '{{Name}}';
+        const name = originalName.substring(originalName.indexOf(' ') + 1);
+        const question = document.querySelector('.question');
+        const artikel = name.startsWith('M.') ? 'wird der' : 'werden die';
+
+        question.innerHTML = question.innerHTML.replace('$NAME$', name).replace('$ARTIKEL$', artikel);
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

@@ -1,0 +1,26 @@
+{
+    "name": "@Paul (Klausurfrage)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Frage"
+        },
+        {
+            "id": 2,
+            "name": "Antwort"
+        },
+        {
+            "id": 3,
+            "name": "Erklärung"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Frage → Antwort"
+        }
+    ]
+}

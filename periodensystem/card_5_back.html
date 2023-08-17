@@ -1,0 +1,90 @@
+<div class="header">
+    <span class="type">Periodensystem</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">An welcher <b>Position</b> befindet sich das Element <b>{{Name}}</b>?</div>
+
+    <hr />
+
+    <div class="periodic-table">
+        <ul class="periodic-table">
+            <li id="H"></li>
+            <li id="He"></li>
+            <li id="Li"></li>
+            <li id="Be"></li>
+            <li id="B"></li>
+            <li id="C"></li>
+            <li id="N"></li>
+            <li id="O"></li>
+            <li id="F"></li>
+            <li id="Ne"></li>
+            <li id="Na"></li>
+            <li id="Mg"></li>
+            <li id="Al"></li>
+            <li id="Si"></li>
+            <li id="P"></li>
+            <li id="S"></li>
+            <li id="Cl"></li>
+            <li id="Ar"></li>
+            <li id="K"></li>
+            <li id="Ca"></li>
+            <li id="Sc"></li>
+            <li id="Ti"></li>
+            <li id="Ti"></li>
+            <li id="Cr"></li>
+            <li id="Mn"></li>
+            <li id="Fe"></li>
+            <li id="Co"></li>
+            <li id="Ni"></li>
+            <li id="Cu"></li>
+            <li id="Zn"></li>
+            <li id="Ga"></li>
+            <li id="Ge"></li>
+            <li id="As"></li>
+            <li id="Se"></li>
+            <li id="Br"></li>
+            <li id="Kr"></li>
+            <li id="Rb"></li>
+            <li id="Sr"></li>
+            <li id="Y"></li>
+            <li id="Zr"></li>
+            <li id="Nb"></li>
+            <li id="Mo"></li>
+            <li id="Tc"></li>
+            <li id="Ru"></li>
+            <li id="Ro"></li>
+            <li id="Pd"></li>
+            <li id="Ag"></li>
+            <li id="Cd"></li>
+            <li id="In"></li>
+            <li id="Sn"></li>
+            <li id="Sb"></li>
+            <li id="Te"></li>
+            <li id="I"></li>
+            <li id="Xe"></li>
+        </ul>
+    </div>
+
+    <div class="additional-infos">Periode {{Periode}} | Gruppe {{Gruppe}}</div>
+</div>
+
+<script>
+    (() => {
+        const symbol = '{{Symbol}}';
+        document.getElementById(symbol).className = 'active';
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

@@ -1,0 +1,54 @@
+{
+    "name": "@Paul (Muskel)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Name"
+        },
+        {
+            "id": 2,
+            "name": "Ursprung"
+        },
+        {
+            "id": 3,
+            "name": "Ansatz"
+        },
+        {
+            "id": 4,
+            "name": "Funktion"
+        },
+        {
+            "id": 5,
+            "name": "Innervation"
+        },
+        {
+            "id": 6,
+            "name": "Prometheus-Bild"
+        },
+        {
+            "id": 7,
+            "name": "Kenhub-Bild"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Name → Ursprung"
+        },
+        {
+            "id": 2,
+            "name": "Name → Ansatz"
+        },
+        {
+            "id": 3,
+            "name": "Name → Funktion"
+        },
+        {
+            "id": 4,
+            "name": "Name → Innervation"
+        }
+    ]
+}
