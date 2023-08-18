@@ -9,47 +9,57 @@
         },
         {
             "id": 2,
-            "name": "Header"
+            "name": "Header",
+            "formatter": "plaintext"
         },
         {
             "id": 3,
             "name": "Image",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         },
         {
             "id": 4,
             "name": "Question Mask",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         },
         {
             "id": 5,
-            "name": "Footer"
+            "name": "Footer",
+            "formatter": "html"
         },
         {
             "id": 6,
-            "name": "Remarks"
+            "name": "Remarks",
+            "formatter": "clear"
         },
         {
             "id": 7,
-            "name": "Sources"
+            "name": "Sources",
+            "formatter": "clear"
         },
         {
             "id": 8,
-            "name": "Extra 1"
+            "name": "Extra 1",
+            "formatter": "clear"
         },
         {
             "id": 9,
-            "name": "Extra 2"
+            "name": "Extra 2",
+            "formatter": "clear"
         },
         {
             "id": 10,
             "name": "Answer Mask",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         },
         {
             "id": 11,
             "name": "Original Mask",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         }
     ],
     "sortFieldID": 2,

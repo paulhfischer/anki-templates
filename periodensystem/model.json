@@ -5,27 +5,33 @@
     "fields": [
         {
             "id": 1,
-            "name": "Name"
+            "name": "Name",
+            "formatter": "plaintext"
         },
         {
             "id": 2,
-            "name": "Symbol"
+            "name": "Symbol",
+            "formatter": "plaintext"
         },
         {
             "id": 3,
-            "name": "Ordnungszahl"
+            "name": "Ordnungszahl",
+            "formatter": "plaintext"
         },
         {
             "id": 4,
-            "name": "Periode"
+            "name": "Periode",
+            "formatter": "plaintext"
         },
         {
             "id": 5,
-            "name": "Gruppe"
+            "name": "Gruppe",
+            "formatter": "plaintext"
         },
         {
             "id": 6,
-            "name": "Elektronegativität"
+            "name": "Elektronegativität",
+            "formatter": "plaintext"
         }
     ],
     "sortFieldID": 1,
