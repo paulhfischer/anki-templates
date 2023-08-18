@@ -5,20 +5,24 @@
     "fields": [
         {
             "id": 1,
-            "name": "Lückentext"
+            "name": "Lückentext",
+            "formatter": "html"
         },
         {
             "id": 2,
-            "name": "Beispiele"
+            "name": "Beispiele",
+            "formatter": "html"
         },
         {
             "id": 3,
-            "name": "Zusatzinformationen"
+            "name": "Zusatzinformationen",
+            "formatter": "html"
         },
         {
             "id": 4,
             "name": "Bilder",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,

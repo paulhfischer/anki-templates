@@ -5,11 +5,13 @@
     "fields": [
         {
             "id": 1,
-            "name": "Begriff"
+            "name": "Begriff",
+            "formatter": "html"
         },
         {
             "id": 2,
-            "name": "Übersetzung"
+            "name": "Übersetzung",
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,

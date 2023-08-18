@@ -5,12 +5,14 @@
     "fields": [
         {
             "id": 1,
-            "name": "Name"
+            "name": "Name",
+            "formatter": "plaintext"
         },
         {
             "id": 2,
             "name": "Strukturformel",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,

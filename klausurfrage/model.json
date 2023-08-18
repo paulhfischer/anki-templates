@@ -5,15 +5,18 @@
     "fields": [
         {
             "id": 1,
-            "name": "Frage"
+            "name": "Frage",
+            "formatter": "html"
         },
         {
             "id": 2,
-            "name": "Antwort"
+            "name": "Antwort",
+            "formatter": "html"
         },
         {
             "id": 3,
-            "name": "Erklärung"
+            "name": "Erklärung",
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,

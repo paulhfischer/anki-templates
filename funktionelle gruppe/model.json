@@ -5,24 +5,29 @@
     "fields": [
         {
             "id": 1,
-            "name": "Stoffklasse"
+            "name": "Stoffklasse",
+            "formatter": "plaintext"
         },
         {
             "id": 2,
             "name": "Strukturformel",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         },
         {
             "id": 3,
-            "name": "Priorität"
+            "name": "Priorität",
+            "formatter": "plaintext"
         },
         {
             "id": 4,
-            "name": "Präfix"
+            "name": "Präfix",
+            "formatter": "html"
         },
         {
             "id": 5,
-            "name": "Suffix"
+            "name": "Suffix",
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,

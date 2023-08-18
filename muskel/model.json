@@ -5,33 +5,40 @@
     "fields": [
         {
             "id": 1,
-            "name": "Name"
+            "name": "Name",
+            "formatter": "plaintext"
         },
         {
             "id": 2,
-            "name": "Ursprung"
+            "name": "Ursprung",
+            "formatter": "html"
         },
         {
             "id": 3,
-            "name": "Ansatz"
+            "name": "Ansatz",
+            "formatter": "html"
         },
         {
             "id": 4,
-            "name": "Funktion"
+            "name": "Funktion",
+            "formatter": "html"
         },
         {
             "id": 5,
-            "name": "Innervation"
+            "name": "Innervation",
+            "formatter": "html"
         },
         {
             "id": 6,
             "name": "Prometheus-Bild",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         },
         {
             "id": 7,
             "name": "Kenhub-Bild",
-            "excludeFromSearch": true
+            "excludeFromSearch": true,
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,
