@@ -22,7 +22,7 @@
             "id": 4,
             "name": "Question Mask",
             "excludeFromSearch": true,
-            "formatter": "html"
+            "formatter": "imageOcclusionSVG"
         },
         {
             "id": 5,
@@ -53,13 +53,13 @@
             "id": 10,
             "name": "Answer Mask",
             "excludeFromSearch": true,
-            "formatter": "html"
+            "formatter": "imageOcclusionSVG"
         },
         {
             "id": 11,
             "name": "Original Mask",
             "excludeFromSearch": true,
-            "formatter": "html"
+            "formatter": "imageOcclusionSVG"
         }
     ],
     "sortFieldID": 2,
