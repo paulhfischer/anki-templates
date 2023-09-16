@@ -5,7 +5,7 @@
 
 <div class="body">
     {{#Header}}
-        <div class="question">{{Header}}</div>
+        <div class="question" data-content="{{Header}}"></div>
     {{/Header}}
 
     <div id="io-wrapper">
@@ -14,7 +14,7 @@
     </div>
 
     {{#Footer}}
-        <div class="additional-infos">{{Footer}}</div>
+        <div class="additional-infos" data-content="{{Footer}}"></div>
     {{/Footer}}
 </div>
 
@@ -44,5 +44,32 @@
         const tagsElement = document.querySelector('.tags');
 
         tagsElement.innerHTML = tags;
+    })();
+
+    (() => {
+        const toggle = (element) => () => {
+            const currentContent = element.textContent;
+            const obscuredContent = '##########';
+            const visibleContent = element.dataset.content;
+
+            if(!visibleContent) {
+                return
+            }
+
+            if(currentContent === obscuredContent) {
+                element.innerHTML = visibleContent;
+            } else {
+                element.innerHTML = obscuredContent;
+            }
+        };
+
+        const headerElement = document.querySelector('.question');
+        const footerElement = document.querySelector('.additional-infos');
+
+        headerElement.addEventListener('click', toggle(headerElement), {passive: true});
+        footerElement.addEventListener('click', toggle(footerElement), {passive: true});
+
+        toggle(headerElement)();
+        toggle(footerElement)();
     })();
 </script>
