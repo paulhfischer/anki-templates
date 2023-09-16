@@ -49,16 +49,18 @@
     (() => {
         const toggle = (element) => () => {
             const currentContent = element.textContent;
-            const obscuredContent = '##########';
             const visibleContent = element.dataset.content;
+            const obscuredContent = visibleContent.replace(/[A-Z]/g, 'O').replace(/[a-z]/g, 'o').replace(/[0-9]/g, '0')
 
             if(!visibleContent) {
                 return
             }
 
-            if(currentContent === obscuredContent) {
+            if(element.style.getPropertyValue('filter')) {
                 element.innerHTML = visibleContent;
+                element.style.removeProperty('filter');
             } else {
+                element.style.setProperty('filter', 'blur(10px)');
                 element.innerHTML = obscuredContent;
             }
         };
