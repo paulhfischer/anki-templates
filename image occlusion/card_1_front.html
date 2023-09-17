@@ -47,10 +47,19 @@
     })();
 
     (() => {
+        const obscureContent = (element) => {
+            for(const child of element.childNodes) {
+                if(child.nodeType === Node.TEXT_NODE) {
+                    child.textContent = child.textContent.replace(/[A-Z]/g, 'O').replace(/[a-z]/g, 'o').replace(/[0-9]/g, '0');
+                } else {
+                    obscureContent(child);
+                }
+            }
+        }
+
         const toggle = (element) => () => {
             const currentContent = element.textContent;
             const visibleContent = element.dataset.content;
-            const obscuredContent = visibleContent.replace(/[A-Z]/g, 'O').replace(/[a-z]/g, 'o').replace(/[0-9]/g, '0')
 
             if(!visibleContent) {
                 return
@@ -61,7 +70,8 @@
                 element.style.removeProperty('filter');
             } else {
                 element.style.setProperty('filter', 'blur(10px)');
-                element.innerHTML = obscuredContent;
+                element.innerHTML = visibleContent;
+                obscureContent(element);
             }
         };
 
