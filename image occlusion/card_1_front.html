@@ -78,10 +78,13 @@
         const headerElement = document.querySelector('.question');
         const footerElement = document.querySelector('.additional-infos');
 
-        headerElement.addEventListener('click', toggle(headerElement), {passive: true});
-        footerElement.addEventListener('click', toggle(footerElement), {passive: true});
-
-        toggle(headerElement)();
-        toggle(footerElement)();
+        if(headerElement) {
+            headerElement.addEventListener('click', toggle(headerElement), {passive: true});
+            toggle(headerElement)();
+        }
+        if(footerElement) {
+            footerElement.addEventListener('click', toggle(footerElement), {passive: true});
+            toggle(footerElement)();
+        }
     })();
 </script>
