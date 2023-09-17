@@ -1,0 +1,46 @@
+<div class="header">
+    <span class="type">Bildfrage</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    {{#Frage (Text)}}
+        <div class="question">{{Frage (Text)}}</div>
+    {{/Frage (Text)}}
+    {{#Frage (Bild)}}
+        <div class="images">{{Frage (Bild)}}</div>
+    {{/Frage (Bild)}}
+    <hr />
+    {{#Antwort}}
+        <div class="answer">{{Antwort}}</div>
+    {{/Antwort}}
+
+    {{#Beispiele}}
+        <div class="examples">
+            <div><strong>Bsp.: </strong></div>
+            <div>{{Beispiele}}</div>
+        </div>
+    {{/Beispiele}}
+
+    {{#Zusatzinformationen}}
+        <div class="additional-infos">{{Zusatzinformationen}}</div>
+    {{/Zusatzinformationen}}
+
+    {{#Bilder}}
+        <div class="images">{{Bilder}}</div>
+    {{/Bilder}}
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

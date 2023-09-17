@@ -1,0 +1,46 @@
+{
+    "name": "@Paul (Bildfrage)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Frage (Text)",
+            "formatter": "html"
+        },
+        {
+            "id": 2,
+            "name": "Frage (Bild)",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        },
+        {
+            "id": 3,
+            "name": "Antwort",
+            "formatter": "html"
+        },
+        {
+            "id": 4,
+            "name": "Beispiele",
+            "formatter": "html"
+        },
+        {
+            "id": 5,
+            "name": "Zusatzinformationen",
+            "formatter": "html"
+        },
+        {
+            "id": 6,
+            "name": "Bilder",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Frage → Antwort"
+        }
+    ]
+}
