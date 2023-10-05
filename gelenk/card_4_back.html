@@ -1,0 +1,26 @@
+{{#Bänder}}
+    <div class="header">
+        <span class="type">Gelenk</span>
+        <span class="tags"></span>
+    </div>
+
+    <div class="body">
+        <div class="question">Welche <b>Bänder</b> sind am <b>{{Name}}</b> beteiligt?</div>
+        <hr />
+        <div class="answer">{{Bänder}}</div>
+    </div>
+
+    <script>
+        (() => {
+            const originalTags = '{{Tags}}';
+            const tags = originalTags
+                .split(' ')
+                .filter((tag) => tag !== 'leech')
+                .join(', ');
+
+            const tagsElement = document.querySelector('.tags');
+
+            tagsElement.innerHTML = tags;
+        })();
+    </script>
+{{/Bänder}}

@@ -1,0 +1,24 @@
+<div class="header">
+    <span class="type">Gelenk</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">Welche <b>Art</b> von Gelenk ist das <b>{{Name}}</b>?</div>
+    <hr />
+    <div class="answer">{{Typ}}</div>
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>

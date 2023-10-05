@@ -1,0 +1,51 @@
+{
+    "name": "@Paul (Gelenk)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Name",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 2,
+            "name": "Typ",
+            "formatter": "html"
+        },
+        {
+            "id": 3,
+            "name": "Artikulierende Strukturen",
+            "formatter": "html"
+        },
+        {
+            "id": 4,
+            "name": "Funktion",
+            "formatter": "html"
+        },
+        {
+            "id": 5,
+            "name": "Bänder",
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Name → Typ"
+        },
+        {
+            "id": 2,
+            "name": "Name → Artikulierende Strukturen"
+        },
+        {
+            "id": 3,
+            "name": "Name → Funktion"
+        },
+        {
+            "id": 4,
+            "name": "Name → Bänder"
+        }
+    ]
+}
