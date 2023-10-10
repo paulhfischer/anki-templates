@@ -4,12 +4,20 @@
 </div>
 
 <div class="body">
-    <div class="question">Welche <b>Art</b> von Gelenk ist das <b>{{Name}}</b>?</div>
+    <div class="question">Welche <b>Art</b> von Gelenk $ARTIKEL$ <b>{{Name}}</b>?</div>
     <hr />
     <div class="answer">{{Typ}}</div>
 </div>
 
 <script>
+    (() => {
+        const name = '{{Name}}';
+        const question = document.querySelector('.question');
+        const artikel = name.startsWith('Art.') ? 'ist das' : 'sind die';
+
+        question.innerHTML = question.innerHTML.replace('$ARTIKEL$', artikel);
+    })();
+
     (() => {
         const originalTags = '{{Tags}}';
         const tags = originalTags
