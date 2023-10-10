@@ -5,12 +5,20 @@
     </div>
 
     <div class="body">
-        <div class="question">Welche <b>Strukturen artikulieren</b> beim <b>{{Name}}</b>?</div>
+        <div class="question">Welche <b>Strukturen artikulieren</b> $ARTIKEL$ <b>{{Name}}</b>?</div>
         <hr />
         <div class="answer">{{Artikulierende Strukturen}}</div>
     </div>
 
     <script>
+        (() => {
+            const name = '{{Name}}';
+            const question = document.querySelector('.question');
+            const artikel = name.startsWith('Art.') ? 'beim' : 'bei den';
+
+            question.innerHTML = question.innerHTML.replace('$ARTIKEL$', artikel);
+        })();
+
         (() => {
             const originalTags = '{{Tags}}';
             const tags = originalTags
