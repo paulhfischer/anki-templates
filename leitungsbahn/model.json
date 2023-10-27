@@ -1,0 +1,60 @@
+{
+    "name": "@Paul (Leitungsbahn)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Name",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 2,
+            "name": "Ursprung",
+            "formatter": "html"
+        },
+        {
+            "id": 3,
+            "name": "Fortsetzung",
+            "formatter": "html"
+        },
+        {
+            "id": 4,
+            "name": "Äste",
+            "formatter": "html"
+        },
+        {
+            "id": 5,
+            "name": "Verlauf",
+            "formatter": "html"
+        },
+        {
+            "id": 6,
+            "name": "Versorgte Strukturen",
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Name → Ursprung"
+        },
+        {
+            "id": 2,
+            "name": "Name → Fortsetzung"
+        },
+        {
+            "id": 3,
+            "name": "Name → Äste"
+        },
+        {
+            "id": 4,
+            "name": "Name → Verlauf"
+        },
+        {
+            "id": 5,
+            "name": "Name → Versorgte Strukturen"
+        }
+    ]
+}
