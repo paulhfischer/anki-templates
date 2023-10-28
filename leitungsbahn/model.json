@@ -11,12 +11,12 @@
         {
             "id": 2,
             "name": "Ursprung",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 3,
             "name": "Fortsetzung",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 4,
