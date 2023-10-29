@@ -12,7 +12,7 @@
         (() => {
             const name = '{{Name}}';
             const question = document.querySelector('.question');
-            const artikel = (name.startsWith('Aa.') || name.startsWith('Vv.') || name.startsWith('Nn.')) ? 'vom' : 'von den';
+            const artikel = (name.startsWith('Aa.') || name.startsWith('Vv.') || name.startsWith('Nn.')) ? 'von den' : 'vom';
 
             question.innerHTML = question.innerHTML.replace('$ARTIKEL$', artikel);
         })();
