@@ -166,6 +166,11 @@ ol > li::before {
     content: counter(step-counter) '.';
 }
 
+sup,
+sub {
+    line-height: 0;
+}
+
 .body > .additional-infos {
     font-style: italic;
     font-size: var(--font-size-small);
