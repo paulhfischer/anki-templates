@@ -350,6 +350,9 @@ sub {
 .amboss-marker {
     cursor: help;
     border: unset !important;
+}
+
+:not(sub, sup) > .amboss-marker {
     text-decoration: underline;
     text-decoration-color: var(--color-highlight);
 }
