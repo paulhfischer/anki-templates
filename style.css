@@ -10,7 +10,12 @@
     --color-text: #000000;
     --color-text-header: #ffffff;
 
-    --font-family: 'Verdana';
+    --font-family-normal: 'Verdana';
+    --font-weight-normal: 'Verdana';
+    --font-family-bold: 'HelveticaNeueMedium, HelveticaNeue-Medium, Helvetica Neue Medium, HelveticaNeue, Helvetica Neue';
+    --font-weight-bold: 600;
+    --font-family-bolder: 'Verdana';
+    --font-weight-bolder: 'Verdana';
     --font-size-normal: 20px;
     --font-size-small: 16px;
     --font-size-tags: 10px;
@@ -200,6 +205,13 @@ sub {
 .body > .images > img {
     width: var(--image-max-width);
     max-height: var(--image-max-height);
+
+    object-fit: contain;
+}
+
+.body > .images > svg {
+    max-width: 100%;
+    max-height: calc(100vh - var(--height-header) - var(--gap-items) - var(--line-height) - var(--gap-items) - var(--gap-items));
 
     object-fit: contain;
 }

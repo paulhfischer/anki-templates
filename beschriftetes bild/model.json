@@ -1,0 +1,40 @@
+{
+    "name": "@Paul (Beschriftetes Bild)",
+    "cssFile": "../style.css",
+    "type": "cloze",
+    "fields": [
+        {
+            "id": 1,
+            "name": "ID",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 2,
+            "name": "Titel",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 3,
+            "name": "Beschriftungen",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 4,
+            "name": "Zusatzinformationen",
+            "formatter": "html"
+        },
+        {
+            "id": 5,
+            "name": "Bild",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 2,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Bild"
+        }
+    ]
+}
