@@ -1,0 +1,43 @@
+<div class="header">
+    <span class="type">Beschriftetes Bild</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="images"></div>
+    <script>
+        (() => {
+            const clozeData = (new DOMParser()).parseFromString(`{{cloze:Beschriftungen}}`, "text/html");
+            const annotationID = clozeData.querySelector(".cloze").innerHTML;
+
+            const imageElement = (new DOMParser()).parseFromString(`{{Bild}}`, "text/html").body.firstChild;
+
+            fetch(imageElement.getAttribute("src"))
+                .then((response) => response.text())
+                .then((svgContent) => (new DOMParser()).parseFromString(svgContent, "image/svg+xml").firstChild)
+                .then((svgElement) => {
+                    svgElement.querySelectorAll(`svg > g:not([id="${annotationID}"]):not(.permanent)`).forEach((element) => element.style.display = "none");
+                    svgElement.querySelectorAll(`svg > g > .marker`).forEach((element) => element.style.display = "none");
+                    document.querySelector('.images').appendChild(svgElement);
+                })
+        })();
+    </script>
+
+    {{#Zusatzinformationen}}
+        <div class="additional-infos">{{Zusatzinformationen}}</div>
+    {{/Zusatzinformationen}}
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+</script>
