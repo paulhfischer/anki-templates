@@ -16,7 +16,7 @@
         {
             "id": 3,
             "name": "Beschriftungen",
-            "formatter": "plaintext"
+            "formatter": "occlusion"
         },
         {
             "id": 4,
