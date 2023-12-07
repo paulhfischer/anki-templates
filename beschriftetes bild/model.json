@@ -6,7 +6,8 @@
         {
             "id": 1,
             "name": "ID",
-            "formatter": "plaintext"
+            "formatter": "plaintext",
+            "collapsed": true
         },
         {
             "id": 2,
