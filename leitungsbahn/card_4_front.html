@@ -1,32 +1,38 @@
-{{#Verlauf}}
+{{#Versorgte Strukturen}}
     <div class="header">
         <span class="type">Leitungsbahn</span>
         <span class="tags"></span>
     </div>
 
     <div class="body">
-        <div class="question">Was ist der <b>Verlauf</b> $ARTIKEL$ <b>{{Name}}</b>?</div>
+        <div class="question"></div>
     </div>
 
     <script>
         (() => {
-            const name = '{{Name}}';
-            const question = document.querySelector('.question');
-            const artikel = name.startsWith('N.') ? 'des' : 'der';
+            const tags = `{{Tags}}`;
 
-            question.innerHTML = question.innerHTML.replace('$ARTIKEL$', artikel);
-        })();
-
-        (() => {
-            const originalTags = '{{Tags}}';
-            const tags = originalTags
+            const content = tags
                 .split(' ')
                 .filter((tag) => tag !== 'leech')
                 .join(', ');
 
-            const tagsElement = document.querySelector('.tags');
+            const element = document.querySelector('.tags');
+            if (element === null) throw new Error();
+            element.innerHTML = content;
+        })();
 
-            tagsElement.innerHTML = tags;
+        (() => {
+            const name = `{{Name}}`;
+
+            const isPlural = name.startsWith('Aa.') || name.startsWith('Vv.') || name.startsWith('Nn.');
+            const gender = name.startsWith('N') ? 'm' : 'f';
+            const preposition = isPlural ? 'von den' : gender === 'm' ? 'vom' : 'von der';
+            const content = `Welche <b>Strukturen</b> werden ${preposition} <b>${name}</b> <b>versorgt</b>?`;
+
+            const element = document.querySelector('.question');
+            if (element === null) throw new Error();
+            element.innerHTML = content;
         })();
     </script>
-{{/Verlauf}}
+{{/Versorgte Strukturen}}

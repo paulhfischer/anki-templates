@@ -5,28 +5,32 @@
     </div>
 
     <div class="body">
-        <div class="question">Was ist der <b>Ursprung</b> $ARTIKEL$ <b>{{Name}}</b>?</div>
+        <div class="question"></div>
     </div>
 
     <script>
         (() => {
-            const name = '{{Name}}';
-            const question = document.querySelector('.question');
-            const artikel = name.startsWith('N.') ? 'des' : 'der';
+            const tags = `{{Tags}}`;
 
-            question.innerHTML = question.innerHTML.replace('$ARTIKEL$', artikel);
-        })();
-
-        (() => {
-            const originalTags = '{{Tags}}';
-            const tags = originalTags
+            const content = tags
                 .split(' ')
                 .filter((tag) => tag !== 'leech')
                 .join(', ');
 
-            const tagsElement = document.querySelector('.tags');
+            const element = document.querySelector('.tags');
+            if (element === null) throw new Error();
+            element.innerHTML = content;
+        })();
 
-            tagsElement.innerHTML = tags;
+        (() => {
+            const name = `{{Name}}`;
+
+            const article = name.startsWith('N.') ? 'des' : 'der';
+            const content = `Was ist der <b>Ursprung</b> ${article} <b>${name}</b>?`;
+
+            const element = document.querySelector('.question');
+            if (element === null) throw new Error();
+            element.innerHTML = content;
         })();
     </script>
 {{/Ursprung}}
