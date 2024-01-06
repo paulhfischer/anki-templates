@@ -15,12 +15,12 @@
         },
         {
             "id": 3,
-            "name": "Fortsetzung",
+            "name": "Äste",
             "formatter": "html"
         },
         {
             "id": 4,
-            "name": "Äste",
+            "name": "Endäste / Fortsetzung",
             "formatter": "html"
         },
         {
@@ -42,18 +42,14 @@
         },
         {
             "id": 2,
-            "name": "Name → Fortsetzung"
-        },
-        {
-            "id": 3,
             "name": "Name → Äste"
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Name → Verlauf"
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Name → Versorgte Strukturen"
         }
     ]
