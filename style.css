@@ -138,6 +138,11 @@ ol {
     list-style: none;
 }
 
+ul + ul,
+ol + ol {
+    margin: 1em 0;
+}
+
 ul > ul,
 ul > ol,
 ol > ul,
