@@ -4,24 +4,23 @@
 </div>
 
 <div class="body">
-    <div class="images" style="display: none;">{{Bild}}</div>
+    <div class="images"></div>
+    <div id="original-image" style="display: none;">{{Bild}}</div>
     <script>
         (() => {
-            const parser = new DOMParser();
-            const clozeData = parser.parseFromString(`{{cloze:Beschriftungen}}`, "text/html");
+            const clozeData = (new DOMParser()).parseFromString(`{{cloze:Beschriftungen}}`, "text/html");
             const annotationID = clozeData.querySelector(".cloze").innerHTML;
-    
-            const imageContainerElement = document.querySelector('.images');
-            const imageElement = document.querySelector('.images > img');
-    
+
+            const imageElement = document.querySelector("#original-image > img");
+
             fetch(imageElement.src)
-                .then(response => response.text())
-                .then(svgContent => imageElement.parentNode.innerHTML = svgContent)
-                .then(() => window.requestAnimationFrame(() => {
-                    imageContainerElement.querySelectorAll(`svg > g:not([id="${annotationID}"]):not(.permanent)`).forEach((element) => element.style.display = "none");
-                    imageContainerElement.querySelectorAll(`svg > g > .marker`).forEach((element) => element.style.display = "none");
-                    imageContainerElement.style.display = "block";
-                }))
+                .then((response) => response.text())
+                .then((svgContent) => (new DOMParser()).parseFromString(svgContent, "text/html").querySelector("svg"))
+                .then((svgElement) => {
+                    svgElement.querySelectorAll(`svg > g:not([id="${annotationID}"]):not(.permanent)`).forEach((element) => element.style.display = "none");
+                    svgElement.querySelectorAll(`svg > g > .marker`).forEach((element) => element.style.display = "none");
+                    document.querySelector('.images').appendChild(svgElement);
+                })
         })();
     </script>
 
