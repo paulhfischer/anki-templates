@@ -1,0 +1,81 @@
+{
+    "name": "@Paul (Multiple Choice)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Frage",
+            "formatter": "html"
+        },
+        {
+            "id": 2,
+            "name": "Anzahl Antwortmöglichkeiten",
+            "formatter": "plaintext",
+            "excludeFromSearch": true
+        },
+        {
+            "id": 3,
+            "name": "Antwort 1",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 4,
+            "name": "Erklärung 1",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 5,
+            "name": "Antwort 2",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 6,
+            "name": "Erklärung 2",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 7,
+            "name": "Antwort 3",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 8,
+            "name": "Erklärung 3",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 9,
+            "name": "Antwort 4",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 10,
+            "name": "Erklärung 4",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 11,
+            "name": "Antwort 5",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 12,
+            "name": "Erklärung 5",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 13,
+            "name": "Lösung",
+            "formatter": "plaintext",
+            "excludeFromSearch": true
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Multiple Choice"
+        }
+    ]
+}

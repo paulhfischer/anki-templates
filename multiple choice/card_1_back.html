@@ -1,0 +1,60 @@
+<div class="header">
+    <span class="type">Multiple Choice</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">{{Frage}}</div>
+
+    <table class="quiz"></table>
+</div>
+
+<script>
+    // v1.1.8 - https://github.com/SimonLammer/anki-persistence/blob/584396fea9dea0921011671a47a0fdda19265e62/script.js
+    if(void 0===window.Persistence){var e="github.com/SimonLammer/anki-persistence/",t="_default";if(window.Persistence_sessionStorage=function(){var i=!1;try{"object"==typeof window.sessionStorage&&(i=!0,this.clear=function(){for(var t=0;t<sessionStorage.length;t++){var i=sessionStorage.key(t);0==i.indexOf(e)&&(sessionStorage.removeItem(i),t--)}},this.setItem=function(i,n){void 0==n&&(n=i,i=t),sessionStorage.setItem(e+i,JSON.stringify(n))},this.getItem=function(i){return void 0==i&&(i=t),JSON.parse(sessionStorage.getItem(e+i))},this.removeItem=function(i){void 0==i&&(i=t),sessionStorage.removeItem(e+i)},this.getAllKeys=function(){for(var t=[],i=Object.keys(sessionStorage),n=0;n<i.length;n++){var s=i[n];0==s.indexOf(e)&&t.push(s.substring(e.length,s.length))}return t.sort()})}catch(n){}this.isAvailable=function(){return i}},window.Persistence_windowKey=function(i){var n=window[i],s=!1;"object"==typeof n&&(s=!0,this.clear=function(){n[e]={}},this.setItem=function(i,s){void 0==s&&(s=i,i=t),n[e][i]=s},this.getItem=function(i){return void 0==i&&(i=t),void 0==n[e][i]?null:n[e][i]},this.removeItem=function(i){void 0==i&&(i=t),delete n[e][i]},this.getAllKeys=function(){return Object.keys(n[e])},void 0==n[e]&&this.clear()),this.isAvailable=function(){return s}},window.Persistence=new Persistence_sessionStorage,Persistence.isAvailable()||(window.Persistence=new Persistence_windowKey("py")),!Persistence.isAvailable()){var i=window.location.toString().indexOf("title"),n=window.location.toString().indexOf("main",i);i>0&&n>0&&n-i<10&&(window.Persistence=new Persistence_windowKey("qt"))}}
+</script>
+
+<script>
+    (() => {
+        if (!Persistence.isAvailable()) {
+            alert("Persistance API is required!");
+            throw new Error("Persistance API is required!");
+        }
+
+        const data = Persistence.getItem("data");
+
+        const table = document.querySelector(".quiz");
+        data.forEach((item) => {
+            const row = document.createElement("tr");
+            row.className = item.solution === Persistence.getItem("selectedAnswers").includes(item.id) ? "correct" : "wrong";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.id = `answer-${item.id}`;
+            checkbox.value = item.id;
+            checkbox.checked = Persistence.getItem("selectedAnswers").includes(item.id);
+            checkbox.disabled = true;
+
+            const label = document.createElement("label");
+            label.htmlFor = `answer-${item.id}`;
+            label.innerHTML = item.answer;
+            label.style.textDecoration = Persistence.getItem("strikedAnswers").includes(item.id) ? "line-through" : "none";
+
+            const explanation = document.createElement("span");
+            explanation.className = "explanation";
+            explanation.innerHTML = item.explanation;
+
+            const cell1 = document.createElement("td");
+            cell1.appendChild(checkbox);
+
+            const cell2 = document.createElement("td");
+            cell2.appendChild(label);
+            cell2.appendChild(explanation);
+
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+
+            table.appendChild(row);
+        });
+    })();
+</script>
