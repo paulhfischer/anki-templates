@@ -4,6 +4,8 @@
     --gap-items: 1.5rem;
     --gap-images: 5%;
 
+    --color-correct: #1fa10e;
+    --color-wrong: #c51913;
     --color-highlight: #0ea188;
     --color-background: #ffffff;
     --color-background-header: #525252;
@@ -18,6 +20,8 @@
     --height-header: 40px;
 
     --width-content: 90%;
+
+    --quiz-table-padding: 10px;
 
     --periodic-table-icon-size: 6vh;
     --periodic-table-icon-radius: 0.5vh;
@@ -176,6 +180,55 @@ sub {
     line-height: 0;
 }
 
+input[type='checkbox'] {
+    font-size: inherit;
+
+    width: var(--line-height);
+    height: var(--line-height);
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    appearance: none;
+    border: 1px solid var(--color-background-header);
+    border-radius: 0;
+
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+
+    background-color: var(--color-background);
+}
+
+input[type='checkbox']:disabled {
+    cursor: default;
+}
+
+input[type='checkbox']:checked::before {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    clip-path: polygon(10% 0%, 0% 0%, 0% 10%, 40% 50%, 0% 90%, 0% 100%, 10% 100%, 50% 60%, 90% 100%, 100% 100%, 100% 90%, 60% 50%, 100% 10%, 100% 0%, 90% 0%, 50% 40%);
+
+    background-color: var(--color-text);
+}
+
+label {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
 .body > .additional-infos {
     font-style: italic;
     font-size: var(--font-size-small);
@@ -323,6 +376,52 @@ sub {
     grid-row: 10;
 }
 /* PERIODIC TABLE END */
+
+/* QUIZ START */
+table.quiz {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    border-collapse: collapse;
+}
+
+table.quiz td {
+    border: 1px solid var(--color-background-header);
+
+    padding: var(--quiz-table-padding);
+
+    text-align: left;
+    vertical-align: top;
+}
+
+table.quiz td > label {
+    text-decoration-style: wavy !important;
+    text-decoration-color: rgba(var(--text-color-rgb), 0.5);
+}
+
+table.quiz td:not(:last-of-type) {
+    width: 1rem;
+}
+
+table.quiz tr.correct > td:not(:last-of-type) {
+    background-color: var(--color-correct);
+}
+
+table.quiz tr.wrong > td:not(:last-of-type) {
+    background-color: var(--color-wrong);
+}
+
+table.quiz span.explanation {
+    display: block;
+
+    color: var(--color-background-header);
+    font-style: italic;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height);
+}
+/* QUIZ END */
 
 /* IMAGE OCCLUSION START */
 #io-overlay {
