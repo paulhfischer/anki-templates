@@ -7,7 +7,7 @@
     --color-correct: #1fa10e;
     --color-wrong: #c51913;
     --color-highlight: #0ea188;
-    --color-background: #ffffff;
+    --color-background: #eeeeee;
     --color-background-header: #525252;
     --color-text: #000000;
     --color-text-header: #ffffff;
@@ -38,7 +38,7 @@
 }
 
 :root.nightMode {
-    --color-background: #000000;
+    --color-background: #2f2f31;
     --color-text: #ffffff;
 }
 
