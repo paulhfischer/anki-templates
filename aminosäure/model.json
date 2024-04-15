@@ -1,0 +1,66 @@
+{
+    "name": "@Paul (Aminosäure)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Name",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel (Keilstrich)",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        },
+        {
+            "id": 3,
+            "name": "Strukturformel (Fischer)",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        },
+        {
+            "id": 4,
+            "name": "pH-Wert",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 5,
+            "name": "Polarität",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 6,
+            "name": "Strukturelle Besonderheit",
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Name → Strukturformel"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel (Keilstrich) → Name"
+        },
+        {
+            "id": 3,
+            "name": "Strukturformel (Fischer) → Name"
+        },
+        {
+            "id": 4,
+            "name": "Name → pH-Wert"
+        },
+        {
+            "id": 5,
+            "name": "Name → Polarität"
+        },
+        {
+            "id": 6,
+            "name": "Name → Strukturelle Besonderheit"
+        }
+    ]
+}
