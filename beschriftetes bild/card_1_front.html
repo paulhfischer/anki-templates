@@ -4,7 +4,7 @@
 </div>
 
 <div class="body">
-    <div class="images" style="display: block;"</div>
+    <div class="big-image"></div>
     <script>
         (() => {
             const clozeData = (new DOMParser()).parseFromString(`{{cloze:Beschriftungen}}`, "text/html");
@@ -18,7 +18,7 @@
                 .then((svgElement) => {
                     svgElement.querySelectorAll(`svg > g:not([id="${annotationID}"])`).forEach((element) => element.style.display = "none");
                     svgElement.querySelectorAll(`svg > g[id="${annotationID}"] > .label`).forEach((element) => element.style.display = "none");
-                    document.querySelector('.images').appendChild(svgElement);
+                    document.querySelector('.big-image').appendChild(svgElement);
                 })
         })();
     </script>

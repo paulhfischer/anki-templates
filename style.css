@@ -2,7 +2,7 @@
     --num-images-per-row: 3;
 
     --gap-items: 1.5rem;
-    --gap-images: 5%;
+    --gap-images: 5vw;
 
     --color-correct: #1fa10e;
     --color-wrong: #c51913;
@@ -30,7 +30,10 @@
     --list-indent: 1.25em;
 
     --image-max-width: calc((100% - (var(--num-images-per-row) - 1) * var(--gap-images)) / var(--num-images-per-row));
-    --image-max-height: 90vh;
+    --image-max-height: calc(100vh - (var(--height-header) + var(--gap-items) + var(--font-size-normal) + var(--gap-items) + 1px + var(--gap-items) + var(--gap-items) + var(--line-height) + 5px));
+
+    --big-image-max-width: 100%;
+    --big-image-max-height: calc(100vh - (var(--height-header) + var(--gap-items) + var(--gap-items) + var(--line-height) + 5px));
 
     --line-height: 1.25em;
 
@@ -251,39 +254,60 @@ label {
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--gap-images);
+
     justify-content: center;
-    align-items: baseline;
 }
 
-.body > .images > img {
-    width: var(--image-max-width);
+.body > .big-image {
+    width: 100%;
+
+    justify-content: center;
+}
+
+.body > .images > img,
+.body > .images > svg {
+    max-width: var(--image-max-width);
     max-height: var(--image-max-height);
+    width: 100%;
 
     object-fit: contain;
 }
 
-.body > .images > svg {
-    max-width: 100%;
-    max-height: calc(100vh - var(--height-header) - var(--gap-items) - var(--line-height) - var(--gap-items) - var(--gap-items));
+.body > .big-image > img,
+.body > .big-image > svg {
+    max-width: var(--big-image-max-width);
+    max-height: var(--big-image-max-height);
+    width: 100%;
+    height: 100%;
 
     object-fit: contain;
 }
 
 .body > .images > section {
-    width: var(--image-max-width);
+    display: flex;
+    flex-direction: column;
+    flex-basis: var(--image-max-width);
+
+    justify-content: center;
+    align-items: center;
 
     text-align: center;
     font-size: var(--font-size-small);
     line-height: var(--line-height);
 }
 
-.body > .images > section > img {
-    width: 100%;
+.body > .images > section > img,
+.body > .images > section > svg {
+    max-width: 100%;
     max-height: var(--image-max-height);
+    width: 100%;
 
     object-fit: contain;
+}
 
-    margin-bottom: -2em;
+.body > .images img:not(:only-child),
+.body > .images svg:not(:only-child) {
+    padding-bottom: calc(var(--line-height) / 2);
 }
 
 /* PERIODIC TABLE START */
