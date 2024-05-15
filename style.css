@@ -284,12 +284,7 @@ label {
 }
 
 .body > .images > section {
-    display: flex;
-    flex-direction: column;
     flex-basis: var(--image-max-width);
-
-    justify-content: center;
-    align-items: center;
 
     text-align: center;
     font-size: var(--font-size-small);
