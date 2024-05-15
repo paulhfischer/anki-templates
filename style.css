@@ -9,6 +9,7 @@
     --color-highlight: #0ea188;
     --color-background: #eeeeee;
     --color-background-header: #525252;
+    --color-background-modal: rgba(0, 0, 0, 0.8);
     --color-text: #000000;
     --color-text-header: #ffffff;
 
@@ -304,6 +305,39 @@ label {
 .body > .images svg:not(:only-child) {
     padding-bottom: calc(var(--line-height) / 2);
 }
+
+/* MODAL START */
+.body > .images img {
+    cursor: zoom-in;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2 * var(--gap-items));
+    height: calc(100% - 2 * var(--gap-items));
+
+    padding: var(--gap-items);
+
+    z-index: 1;
+    background-color: var(--color-background-modal);
+
+    cursor: zoom-out;
+}
+
+.modal > img {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--color-background);
+
+    cursor: default;
+}
+/* MODAL END */
 
 /* PERIODIC TABLE START */
 .periodic-table {

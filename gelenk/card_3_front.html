@@ -28,5 +28,28 @@
 
             tagsElement.innerHTML = tags;
         })();
+
+        (() => {
+            const openModal = (event) => {
+              const modal = document.createElement('div');
+              modal.classList.add('modal');
+
+              const image = document.createElement('img');
+              image.src = event.target.src;
+
+              modal.appendChild(image);
+              document.body.appendChild(modal);
+
+              modal.onclick = (event) => {
+                if (event.target === modal) {
+                  document.body.removeChild(modal);
+                };
+              };
+            };
+
+            document.querySelectorAll('.body > .images img').forEach((img) => {
+                img.addEventListener('click', openModal);
+            });
+        })();
     </script>
 {{/Funktion}}
