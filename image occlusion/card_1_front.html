@@ -35,18 +35,6 @@
     })();
 
     (() => {
-        const originalTags = '{{Tags}}';
-        const tags = originalTags
-            .split(' ')
-            .filter((tag) => tag !== 'leech')
-            .join(', ');
-
-        const tagsElement = document.querySelector('.tags');
-
-        tagsElement.innerHTML = tags;
-    })();
-
-    (() => {
         const obscureContent = (element) => {
             for(const child of element.childNodes) {
                 if(child.nodeType === Node.TEXT_NODE) {
@@ -86,5 +74,17 @@
             footerElement.addEventListener('click', toggle(footerElement), {passive: true});
             toggle(footerElement)();
         }
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
     })();
 </script>

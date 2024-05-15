@@ -11,19 +11,6 @@
 
 <script>
     (() => {
-        const tags = `{{Tags}}`;
-
-        const content = tags
-            .split(' ')
-            .filter((tag) => tag !== 'leech')
-            .join(', ');
-
-        const element = document.querySelector('.tags');
-        if (element === null) throw new Error();
-        element.innerHTML = content;
-    })();
-
-    (() => {
         const name = `{{Name}}`;
 
         const article = name.startsWith('N.') ? 'des' : 'der';
@@ -53,5 +40,17 @@
         const element = document.querySelector('.answer');
         if (element === null) throw new Error();
         element.innerHTML = content;
+    })();
+
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
     })();
 </script>
