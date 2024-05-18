@@ -257,6 +257,7 @@ label {
     gap: var(--gap-images);
 
     justify-content: center;
+    align-items: center;
 }
 
 .body > .big-image {
