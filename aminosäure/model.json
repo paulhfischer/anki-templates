@@ -5,7 +5,7 @@
     "fields": [
         {
             "id": 1,
-            "name": "Name",
+            "name": "Trivialname",
             "formatter": "plaintext"
         },
         {
@@ -22,12 +22,12 @@
         },
         {
             "id": 4,
-            "name": "pH-Wert",
+            "name": "pH-Bereich",
             "formatter": "plaintext"
         },
         {
             "id": 5,
-            "name": "Polarität",
+            "name": "Polar",
             "formatter": "plaintext"
         },
         {
@@ -40,27 +40,27 @@
     "templates": [
         {
             "id": 1,
-            "name": "Name → Strukturformel"
+            "name": "Trivialname → Strukturformel"
         },
         {
             "id": 2,
-            "name": "Strukturformel (Keilstrich) → Name"
+            "name": "Strukturformel (Keilstrich) → Trivialname"
         },
         {
             "id": 3,
-            "name": "Strukturformel (Fischer) → Name"
+            "name": "Strukturformel (Fischer) → Trivialname"
         },
         {
             "id": 4,
-            "name": "Name → pH-Wert"
+            "name": "Trivialname → pH-Bereich"
         },
         {
             "id": 5,
-            "name": "Name → Polarität"
+            "name": "Trivialname → Polarität"
         },
         {
             "id": 6,
-            "name": "Name → Strukturelle Besonderheit"
+            "name": "Trivialname → Strukturelle Besonderheit"
         }
     ]
 }
