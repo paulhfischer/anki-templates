@@ -1,0 +1,56 @@
+{
+    "name": "@Paul (Fettsäure)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Trivialname",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        },
+        {
+            "id": 3,
+            "name": "Name des Salzes",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 4,
+            "name": "Omega-Nomenklatur",
+            "formatter": "html"
+        },
+        {
+            "id": 5,
+            "name": "Delta-Nomenklatur",
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Trivialname → Strukturformel"
+        },
+        {
+            "id": 2,
+            "name": "Strukturformel → Trivialname"
+        },
+        {
+            "id": 3,
+            "name": "Trivialname → Name des Salzes"
+        },
+        {
+            "id": 4,
+            "name": "Trivialname → Omega-Nomenklatur"
+        },
+        {
+            "id": 5,
+            "name": "Trivialname → Delta-Nomenklatur"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{{#Name des Salzes}}
+<div class="header">
+    <span class="type">Fettsäure</span>
+    <span class="tags"></span>
+</div>
+
+<div class="body">
+    <div class="question">Wie heißt das <b>Salz</b> von <b>{{Trivialname}}</b>?</div>
+    <hr />
+    <div class="answer">{{Name des Salzes}}</div>
+</div>
+
+<script>
+    (() => {
+        const originalTags = '{{Tags}}';
+        const tags = originalTags
+            .split(' ')
+            .filter((tag) => tag !== 'leech')
+            .join(', ');
+
+        const tagsElement = document.querySelector('.tags');
+
+        tagsElement.innerHTML = tags;
+    })();
+
+    (() => {
+        const openModal = (event) => {
+          const modal = document.createElement('div');
+          modal.classList.add('modal');
+
+          const image = document.createElement('img');
+          image.src = event.target.src;
+
+          modal.appendChild(image);
+          document.body.appendChild(modal);
+
+          modal.onclick = (event) => {
+            if (event.target === modal) {
+              document.body.removeChild(modal);
+            };
+          };
+        };
+
+        document.querySelectorAll('.body > .images img').forEach((img) => {
+            img.addEventListener('click', openModal);
+        });
+    })();
+</script>
+{{/Name des Salzes}}
