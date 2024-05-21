@@ -34,22 +34,18 @@
     "templates": [
         {
             "id": 1,
-            "name": "Trivialname → Strukturformel"
-        },
-        {
-            "id": 2,
             "name": "Strukturformel → Trivialname"
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Trivialname → Name des Salzes"
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Trivialname → Omega-Nomenklatur"
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Trivialname → Delta-Nomenklatur"
         }
     ]
