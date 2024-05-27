@@ -142,7 +142,9 @@ ol {
 }
 
 ul + ul,
-ol + ol {
+ul + ol,
+ol + ol,
+ol + ul {
     margin: 1em 0;
 }
 
