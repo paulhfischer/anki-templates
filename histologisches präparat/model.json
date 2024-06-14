@@ -1,0 +1,39 @@
+{
+    "name": "@Paul (Histologisches Präparat)",
+    "cssFile": "../style.css",
+    "type": "normal",
+    "fields": [
+        {
+            "id": 1,
+            "name": "Struktur",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 2,
+            "name": "Färbung",
+            "formatter": "plaintext"
+        },
+        {
+            "id": 3,
+            "name": "Differentialdiagnose",
+            "formatter": "html"
+        },
+        {
+            "id": 4,
+            "name": "Bild",
+            "excludeFromSearch": true,
+            "formatter": "html"
+        }
+    ],
+    "sortFieldID": 1,
+    "templates": [
+        {
+            "id": 1,
+            "name": "Bild → Struktur"
+        },
+        {
+            "id": 2,
+            "name": "Bild → Färbung"
+        }
+    ]
+}
