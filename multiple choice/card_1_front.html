@@ -118,18 +118,6 @@
     })();
 
     (() => {
-        const originalTags = '{{Tags}}';
-        const tags = originalTags
-            .split(' ')
-            .filter((tag) => tag !== 'leech')
-            .join(', ');
-
-        const tagsElement = document.querySelector('.tags');
-
-        tagsElement.innerHTML = tags;
-    })();
-
-    (() => {
         const openModal = (event) => {
           const modal = document.createElement('div');
           modal.classList.add('modal');

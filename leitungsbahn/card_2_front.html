@@ -21,18 +21,6 @@
         })();
 
         (() => {
-            const originalTags = '{{Tags}}';
-            const tags = originalTags
-                .split(' ')
-                .filter((tag) => tag !== 'leech')
-                .join(', ');
-
-            const tagsElement = document.querySelector('.tags');
-
-            tagsElement.innerHTML = tags;
-        })();
-
-        (() => {
             const openModal = (event) => {
               const modal = document.createElement('div');
               modal.classList.add('modal');
@@ -77,18 +65,6 @@
             const element = document.querySelector('.question');
             if (element === null) throw new Error();
             element.innerHTML = content;
-        })();
-
-        (() => {
-            const originalTags = '{{Tags}}';
-            const tags = originalTags
-                .split(' ')
-                .filter((tag) => tag !== 'leech')
-                .join(', ');
-
-            const tagsElement = document.querySelector('.tags');
-
-            tagsElement.innerHTML = tags;
         })();
 
         (() => {
