@@ -1,0 +1,36 @@
+{{#Zusatzbild}}
+    <div class="header">
+        <span class="type">Histologisches Präparat</span>
+        <span class="tags"></span>
+    </div>
+
+    <div class="body">
+        <div class="question">Um welche <b>Struktur</b> handelt es sich bei folgendem <b>Präparat</b>?</div>
+        <div class="images">{{Zusatzbild}}</div>
+    </div>
+
+    <script>
+        (() => {
+            const openModal = (event) => {
+            const modal = document.createElement('div');
+            modal.classList.add('modal');
+
+            const image = document.createElement('img');
+            image.src = event.target.src;
+
+            modal.appendChild(image);
+            document.body.appendChild(modal);
+
+            modal.onclick = (event) => {
+                if (event.target === modal) {
+                document.body.removeChild(modal);
+                };
+            };
+            };
+
+            document.querySelectorAll('.body > .images img').forEach((img) => {
+                img.addEventListener('click', openModal);
+            });
+        })();
+    </script>
+{{/Zusatzbild}}

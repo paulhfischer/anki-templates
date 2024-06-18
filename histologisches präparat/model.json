@@ -23,6 +23,12 @@
             "name": "Bild",
             "excludeFromSearch": true,
             "formatter": "html"
+        },
+        {
+            "id": 5,
+            "name": "Zusatzbild",
+            "excludeFromSearch": true,
+            "formatter": "html"
         }
     ],
     "sortFieldID": 1,
@@ -34,6 +40,14 @@
         {
             "id": 2,
             "name": "Bild → Färbung"
+        },
+        {
+            "id": 3,
+            "name": "Zusatzbild → Struktur"
+        },
+        {
+            "id": 4,
+            "name": "Zusatzbild → Färbung"
         }
     ]
 }
