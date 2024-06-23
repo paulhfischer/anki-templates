@@ -145,7 +145,7 @@ ul + ul,
 ul + ol,
 ol + ol,
 ol + ul {
-    margin: 1em 0;
+    margin-block-start: var(--line-height);
 }
 
 ul > ul,
@@ -164,6 +164,19 @@ ol > li {
     position: relative;
 
     counter-increment: step-counter;
+}
+
+ul:has(ul, ol) > li,
+ol:has(ul, ol) > li,
+ul:has(li br) > li,
+ol:has(li br) > li {
+    margin-block-start: calc(var(--line-height) / 4);
+}
+
+ul > li:first-of-type,
+ol > li:first-of-type,
+:is(ul, ol) :is(ul, ol) > li {
+    margin-block-start: initial;
 }
 
 ul > li::before,
