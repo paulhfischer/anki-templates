@@ -17,52 +17,52 @@
         {
             "id": 3,
             "name": "Antwort 1",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 4,
             "name": "Erklärung 1",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 5,
             "name": "Antwort 2",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 6,
             "name": "Erklärung 2",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 7,
             "name": "Antwort 3",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 8,
             "name": "Erklärung 3",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 9,
             "name": "Antwort 4",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 10,
             "name": "Erklärung 4",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 11,
             "name": "Antwort 5",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 12,
             "name": "Erklärung 5",
-            "formatter": "plaintext"
+            "formatter": "html"
         },
         {
             "id": 13,
