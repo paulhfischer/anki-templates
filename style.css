@@ -11,6 +11,7 @@
     --color-background-header: #525252;
     --color-background-modal: rgba(0, 0, 0, 0.8);
     --color-text: #000000;
+    --color-text-additional: #666666;
     --color-text-header: #ffffff;
 
     --font-family: 'Open Sans', 'Apple SD Gothic Neo', 'Calibri', 'Helvetica Neue';
@@ -249,7 +250,7 @@ label {
 }
 
 .body > .additional-infos {
-    font-style: italic;
+    color: var(--color-text-additional);
     font-size: var(--font-size-small);
     line-height: var(--line-height);
 }
